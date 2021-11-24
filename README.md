@@ -31,7 +31,7 @@ oh-my-pg-linter run ./file.lua
 # Установка
 
 ```shell
-go install github.com/vadv/oh-my-pg-linter@latest
+go install github.com/ozonru/oh-my-pg-linter@latest
 ```
 
 # Как написать проверку
