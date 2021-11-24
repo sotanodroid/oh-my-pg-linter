@@ -19,7 +19,7 @@ $$
               SELECT indexrelid::oid::regclass FROM pg_index WHERE NOT indisvalid AND indexrelid::oid::regclass::TEXT = 'dist_id_temp_idx'
             )
         THEN
-            DROP INDEX dist_id_temp_idx;
+            DROP INDEX CONCURRENTLY dist_id_temp_idx;
         END IF;
         IF NOT EXISTS (
               SELECT indexrelid::oid::regclass FROM pg_index WHERE indexrelid::oid::regclass::TEXT = 'dist_id_temp_idx'
